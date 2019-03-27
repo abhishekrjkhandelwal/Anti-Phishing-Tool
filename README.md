@@ -20,6 +20,6 @@ In order to keep using this extension, it requires the Xampp server to keep on r
 
 For Any Queries,
 Contact:
-LinkedIn: https://www.linkedin.com/in/harshit-g-82b4b1157
-Mail:	  harshitkoh98@gmail.com
+https://www.linkedin.com/in/abhishek-khandelwal-b1071612b/
+Mail:	  abhishek30199808@gmail.com
 ---------------------------------------------------------------------------------
