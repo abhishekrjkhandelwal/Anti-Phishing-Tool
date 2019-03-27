@@ -1,0 +1,515 @@
+<?php //include_once('http://localhost/phishing/script.php'); ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="popup.js"></script>
+	<meta charset= "UTF-8">
+	<title></title>
+	    <script src="test.js"></script>
+<!-- success mode  -->
+<!--		
+<style>		
+.check_mark {
+  width: 80px;
+  height: 130px;
+  margin: 0 auto;
+}
+
+button {
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.hide{
+  display:none;
+}
+
+.sa-icon {
+  width: 80px;
+  height: 80px;
+  border: 4px solid gray;
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  border-radius: 50%;
+  margin: 20px auto;
+  padding: 0;
+  position: relative;
+  box-sizing: content-box;
+}
+
+.sa-icon.sa-success {
+  border-color: #4CAF50;
+}
+
+.sa-icon.sa-success::before, .sa-icon.sa-success::after {
+  content: '';
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  border-radius: 50%;
+  position: absolute;
+  width: 60px;
+  height: 120px;
+  background: white;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sa-icon.sa-success::before {
+  -webkit-border-radius: 120px 0 0 120px;
+  border-radius: 120px 0 0 120px;
+  top: -7px;
+  left: -33px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 60px 60px;
+  transform-origin: 60px 60px;
+}
+
+.sa-icon.sa-success::after {
+  -webkit-border-radius: 0 120px 120px 0;
+  border-radius: 0 120px 120px 0;
+  top: -11px;
+  left: 30px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-transform-origin: 0px 60px;
+  transform-origin: 0px 60px;
+}
+
+.sa-icon.sa-success .sa-placeholder {
+  width: 80px;
+  height: 80px;
+  border: 4px solid rgba(76, 175, 80, .5);
+  -webkit-border-radius: 40px;
+  border-radius: 40px;
+  border-radius: 50%;
+  box-sizing: content-box;
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 2;
+}
+
+.sa-icon.sa-success .sa-fix {
+  width: 5px;
+  height: 90px;
+  background-color: white;
+  position: absolute;
+  left: 28px;
+  top: 8px;
+  z-index: 1;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.sa-icon.sa-success.animate::after {
+  -webkit-animation: rotatePlaceholder 4.25s ease-in;
+  animation: rotatePlaceholder 4.25s ease-in;
+}
+
+.sa-icon.sa-success {
+  border-color: transparent\9;
+}
+.sa-icon.sa-success .sa-line.sa-tip {
+  -ms-transform: rotate(45deg) \9;
+}
+.sa-icon.sa-success .sa-line.sa-long {
+  -ms-transform: rotate(-45deg) \9;
+}
+
+.animateSuccessTip {
+  -webkit-animation: animateSuccessTip 0.75s;
+  animation: animateSuccessTip 0.75s;
+}
+
+.animateSuccessLong {
+  -webkit-animation: animateSuccessLong 0.75s;
+  animation: animateSuccessLong 0.75s;
+}
+
+@-webkit-keyframes animateSuccessLong {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+@-webkit-keyframes animateSuccessTip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+@keyframes animateSuccessTip {
+  0% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+
+@keyframes animateSuccessLong {
+  0% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+  84% {
+    width: 55px;
+    right: 0px;
+    top: 35px;
+  }
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+
+.sa-icon.sa-success .sa-line {
+  height: 5px;
+  background-color: #4CAF50;
+  display: block;
+  border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+}
+
+.sa-icon.sa-success .sa-line.sa-tip {
+  width: 25px;
+  left: 14px;
+  top: 46px;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sa-icon.sa-success .sa-line.sa-long {
+  width: 47px;
+  right: 8px;
+  top: 38px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+@-webkit-keyframes rotatePlaceholder {
+  0% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  12% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+  }
+}
+@keyframes rotatePlaceholder {
+  0% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  5% {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+  12% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+  }
+  100% {
+    transform: rotate(-405deg);
+    -webkit-transform: rotate(-405deg);
+  }
+}
+</style>
+-->
+<!--  danger mode  -->
+<style>
+@keyframes scaleUpDown {
+  0%,
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+  50%,
+  90% {
+    transform: scaleY(1.1);
+  }
+  75% {
+    transform: scaleY(0.95);
+  }
+  80% {
+    transform: scaleX(0.95);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: skewX(0) scale(1);
+  }
+  50% {
+    transform: skewX(5deg) scale(0.9);
+  }
+}
+
+@keyframes particleUp {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    top: -100%;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    background-color: #ef5a00;
+  }
+  50% {
+    background-color: #ff7800;
+  }
+}
+
+.fire {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  margin-top: 10em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fire-main {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: scaleUpDown 3s ease-out;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-main .main-fire {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(farthest-corner at 10px 0, #d43300 0%, #ef5a00 95%);
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 60% 40%;
+  filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-main .particle-fire {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  width: 10px;
+  height: 10px;
+  background-color: #ef5a00;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #d43322);
+  animation: particleUp 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-right {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  animation: shake 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-right .main-fire {
+  position: absolute;
+  top: 15%;
+  right: -25%;
+  width: 80%;
+  height: 80%;
+  background-color: #ef5a00;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 60% 40%;
+  filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-right .particle-fire {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background-color: #ef5a00;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #d43322);
+  animation: particleUp 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-left {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  animation: shake 3s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+
+.fire-left .main-fire {
+  position: absolute;
+  top: 15%;
+  left: -20%;
+  width: 80%;
+  height: 80%;
+  background-color: #ef5a00;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 60% 40%;
+  filter: drop-shadow(0 0 10px #d43322);
+}
+
+.fire-left .particle-fire {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  width: 10%;
+  height: 10%;
+  background-color: #ef5a00;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 10px #d43322);
+  animation: particleUp 3s infinite ease-out 0;
+  animation-fill-mode: both;
+}
+
+.fire-bottom .main-fire {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  width: 75%;
+  height: 75%;
+  background-color: #ff7800;
+  transform: scaleX(0.8) rotate(45deg);
+  border-radius: 0 40% 100% 40%;
+  filter: blur(10px);
+  animation: glow 2s ease-out 0;
+  animation-iteration-count: infinite;
+  animation-fill-mode: both;
+}
+</style>
+
+   </head>
+   <body height="500px">
+    <div id="result"></div>
+    <div id="demo"></div>	
+    <div id="status"></div>	
+	
+<!-- Sucess -->
+<!--
+<div class="check_mark">
+  <div class="sa-icon sa-success animate">
+    <span class="sa-line sa-tip animateSuccessTip"></span>
+    <span class="sa-line sa-long animateSuccessLong"></span>
+    <div class="sa-placeholder"></div>
+    <div class="sa-fix"></div>
+  </div>
+</div>
+
+<div class="fire">
+  <div class="fire-left">
+    <div class="main-fire"></div>
+    <div class="particle-fire"></div>
+  </div>
+  <div class="fire-main">
+    <div class="main-fire"></div>
+    <div class="particle-fire"></div>
+  </div>
+  <div class="fire-right">
+    <div class="main-fire"></div>
+    <div class="particle-fire"></div>
+  </div>
+  <div class="fire-bottom">
+    <div class="main-fire"></div>
+  </div>
+</div>
+-->
+	</body> 
+</html>

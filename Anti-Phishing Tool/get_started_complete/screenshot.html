@@ -1,0 +1,35 @@
+<html>
+<head>
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="html2canvas.min.js"></script>
+ </head>
+ <body>
+
+ <div class="container" id='container'>
+   <img src='images/hello.jpg' width='100' height='100'>
+ </div>
+ <input type='button' id='but_screenshot' value='Take screenshot' onclick='screenshot(); '></br>
+ 
+<script>
+  function screenshot(){
+    html2canvas(document.body).then(function(canvas){
+    document.body.appendChild(canvas);
+    
+	//Get base64URL 
+	var base64URL = canvas.toDataURL('image/jpg').replace('image/octet-stream');
+	
+	//AJAX request
+	$.ajax({
+	url: 'ajaxfile.php',
+	type: 'post',
+	data: {image: base64URL},
+	success: function(data){
+	console.log('Upload successfully');
+	  }
+	});
+   });
+  }
+</script>
+</body>
+</html>

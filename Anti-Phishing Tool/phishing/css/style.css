@@ -1,0 +1,46 @@
+
+body{
+background-color: #F0F8FF;	
+}
+
+.container{
+	background-color
+}
+
+img{
+	margin-top: 80px;
+	width: 150px;
+	height: 80px;
+}
+
+.warning{
+      margin-left: 300px;
+	  margin-top:-50px;   	  
+}
+.sug{
+   margin-top: 20px;
+   letter-spacing: 1px;   
+}	
+
+
+.button{
+	margin-top: 40px;
+	margin-left: 500px;
+}
+
+.dropdown{
+	margin-top: 40px;
+	margin-left: 500px;
+}
+
+.btn-group{
+	margin-left: 800px;
+}
+h4{
+	margin-top: 20px;
+}
+
+
+.text-center{
+	width: 200px;
+}

@@ -1,0 +1,50 @@
+html, body{
+	height: 100%;
+}
+
+body{
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-radius-gradient(center, ellipse cover, #FFFFFF 0%, #FAFAFA 50%, #F5F5F5 60%, #BEBEBE 100%);
+	margin: 0;
+	padding: 0;
+}
+
+h1{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	line-height: 120%;
+	font-family: Arial, sans-serif;
+	color: rgb(66,66,66);
+	letter-spacing: 0.05em;
+}	
+
+.userimage img{
+position: absolute;   
+margin-top: 120px;
+margin-left: 150px;   
+width: 300px;
+height: 200px;
+}
+
+@media only screen and(max-width: 600px){
+	.userimage img{
+
+}
+}
+
+
+
+.realimage img{
+position: absolute;		
+margin-top: 120px;
+margin-left: 850px;   
+width: 300px;
+height: 200px;
+}
+
+@media only screen and(max-width: 600px){
+	.userimage img{
+}
+}

@@ -1,0 +1,44 @@
+{
+  "manifest_version": 2,
+  "name": "Phising Detection",
+  "version": "1.0",
+  "description": "Speak the selected text",
+  
+  "permissions": [
+     "tabs",
+	 "background",
+	 "http://localhost/*",
+	 "activeTab",
+	 "tabCapture",
+     "https://ajax.googleapis.com/",
+	  "webRequest",
+    "webRequestBlocking",
+    "http://localhost/phishing/phishing.php"
+	 
+  ],
+
+  "background": {
+    "scripts": [
+	                 "background.js",
+					"js/jquery-3.3.1.min.js"
+					]
+  },
+  
+  "content_scripts": [
+	{
+		"matches" : ["http://*/*", "https://*/*"],
+		"js" : [ "contentscript.js", 
+				 "popup.js"]
+	}
+  ],
+  
+    "icons": { "16": "images/icon.png",
+           "48": "images/icon.png",
+          "128": "images/icon.png" },
+  
+    "browser_action": {
+      "default_icon": "images/icon.png",
+	  "default_popup": "popup.html",	  
+	  "default_title": "A popup will come here"
+	}
+}
